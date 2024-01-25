@@ -26,12 +26,15 @@ console.log(yogurtArray);
 function userFlavorList(array) {
   let order = {};
   for (const element of array) {
-    if (!element in order) {
-      order.splice(0);
+    // console.log(element);
+    if (element in order) {
+      order[element] += 1;
     } else {
+      order[element] = 1;
     }
   }
   return order;
 }
 
-console.log(userFlavorList(yogurtArray));
+const flavorsOrder = userFlavorList(yogurtArray);
+console.log(flavorsOrder);
