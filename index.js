@@ -14,7 +14,9 @@ Return flavor list to user
 */
 
 // Prompt the user for a list of integers separated by commas.
-const userInputString = prompt(
+const userFlavorString = prompt(
   "Please enter how many of your favorite yogurt flavors you would like to order, separated by commas...i.e.",
   "chocolate,vanilla,vanilla,strawberry"
 );
+
+const yogurtArray = userFlavorString.split(",");
